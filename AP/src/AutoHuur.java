@@ -4,7 +4,7 @@ public class AutoHuur {
     private Auto gehuurdeAuto;
     private Klant huurder;
 
-    public AutoHuur(){
+    public AutoHuur() {
 
     }
 
@@ -12,7 +12,7 @@ public class AutoHuur {
         this.aantalDagen = aantalDagen;
     }
 
-    public void setGehuurdeAuto(Auto gA){
+    public void setGehuurdeAuto(Auto gA) {
         this.gehuurdeAuto = gA;
     }
 
@@ -28,11 +28,12 @@ public class AutoHuur {
         return huurder;
     }
 
-    public double totaalPrijs(){
-        return aantalDagen*(gehuurdeAuto.getPrijsPerDag()*(huurder.getKorting()/100));
+    public double totaalPrijs() {
+        return aantalDagen * (gehuurdeAuto.getPrijsPerDag() * (huurder.getKorting() / 100));
     }
 
-    public String toString(){
-        String.format("aantal dagen: %s en dat kost %s", aantalDagen);
+    public String toString() {
+        return String.format("aantal dagen: %s en dat kost %s", aantalDagen);
     }
 }
+
