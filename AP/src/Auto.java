@@ -6,7 +6,7 @@ public class Auto {
     private double prijsPerDag;
     private ArrayList<AutoHuur> gehuurdeAuto = new ArrayList<>();
 
-    public Auto(String tp, double prDg){
+    public Auto(String tp, double prDg) {
         type = tp;
         prijsPerDag = prDg;
     }
@@ -19,8 +19,7 @@ public class Auto {
         return prijsPerDag;
     }
 
-
-    public String toString(){
+    public String toString() {
         return String.format("autotype: %s met prijs per dag: %s", type, prijsPerDag);
     }
 }

@@ -1,7 +1,8 @@
 public class Main {
     public static void main(String[] args){
 
-        AutoHuur ah1( );
+        AutoHuur ah1 = new AutoHuur();
+        System.out.println("Eerste autohuur: "+ah1.toString());
 // Print "Eerste autohuur: " + ah1.toString()
 
         Klant k("Mijnheer de Vries");

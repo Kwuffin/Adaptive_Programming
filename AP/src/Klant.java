@@ -7,27 +7,22 @@ public class Klant {
     private ArrayList<AutoHuur> huurder = new ArrayList<>();
 
 
-    public Klant(String nm, double korting){
+    public Klant(String nm, double korting) {
         naam = nm;
         kortingsPercentage = korting;
 
     }
 
-    public String getNaam() {
-        return naam;
+    public void setKorting(double kP){
+        this.kortingsPercentage = kP;
     }
 
-    public double getKortingsPercentage() {
+    public double getKorting(){
         return kortingsPercentage;
     }
 
-
-    public void setNaam(String naam) {
-        this.naam = naam;
-    }
-
-    public void setKortingsPercentage(double kortingsPercentage) {
-        this.kortingsPercentage = kortingsPercentage;
+    public String toString(){
+        return String.format("op naam van: %s (korting: %s)", naam, kortingsPercentage);
     }
 
 }
