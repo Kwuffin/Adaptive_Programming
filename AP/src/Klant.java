@@ -7,10 +7,8 @@ public class Klant {
     private ArrayList<AutoHuur> huurder = new ArrayList<>();
 
 
-    public Klant(String nm, double korting) {
+    public Klant(String nm) {
         naam = nm;
-        kortingsPercentage = korting;
-
     }
 
     public void setKorting(double kP){
@@ -22,7 +20,7 @@ public class Klant {
     }
 
     public String toString(){
-        return String.format("op naam van: %s (korting: %s)", naam, kortingsPercentage);
+        return String.format("op naam van: %s (korting: %s%%)", naam, kortingsPercentage);
     }
 
 }

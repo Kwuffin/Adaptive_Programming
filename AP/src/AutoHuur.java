@@ -29,11 +29,20 @@ public class AutoHuur {
     }
 
     public double totaalPrijs() {
-        return aantalDagen * (gehuurdeAuto.getPrijsPerDag() * (huurder.getKorting() / 100));
+        if(gehuurdeAuto == null || huurder == null){
+            return 0;
+        } else
+            return aantalDagen * (gehuurdeAuto.getPrijsPerDag() * (1 - huurder.getKorting() / 100));
     }
 
+
     public String toString() {
-        return String.format("aantal dagen: %s en dat kost %s", aantalDagen);
+        return (gehuurdeAuto == null ? "er is geen auto bekend\n" +
+                (huurder == null ? String.format("er is geen huurder bekend\naantal dagen: %s en dat kost %s\n", aantalDagen, totaalPrijs())
+                        : String.format("Op naam van: %s\n aantal dagen: %s en dat kost %s", huurder, aantalDagen, totaalPrijs()))
+                : (gehuurdeAuto.toString() + "\n" +
+                (huurder == null ? String.format("er is geen huurder bekend\naantal dagen: %s en dat kost %s", aantalDagen, totaalPrijs())
+                        : String.format("Op naam van: %s\n aantal dagen: %s en dat kost %s", huurder, aantalDagen, totaalPrijs()))));
     }
 }
 
