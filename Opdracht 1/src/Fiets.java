@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Fiets {
     private String merk;
     private int prijs;
-    private ArrayList<Fietsenwinkel> fiets = new ArrayList<>();
+    private ArrayList<Fietsenwinkel> fietsen = new ArrayList<>();
 
     public Fiets(String mk, int p){
         merk = mk;
@@ -11,16 +11,16 @@ public class Fiets {
     }
 
 
-    public void setPrijs(int prijs) {
-        this.prijs = prijs;
+    public void setPrijs(int p) {
+        this.prijs = p;
     }
 
     public int getPrijs() {
         return prijs;
     }
 
-    public void setMerk(String merk) {
-        this.merk = merk;
+    public void setMerk(String mk) {
+        this.merk = mk;
     }
 
     public String toString(){

@@ -14,7 +14,7 @@ public class Verkoper {
         this.naam = naam;
     }
 
-    public void setAantalJaarInDienst(int aantalJaarInDienst) {
-        this.aantalJaarInDienst = aantalJaarInDienst;
+    public void setAantalJaarInDienst(int aJID) {
+        this.aantalJaarInDienst = aJID;
     }
 }
