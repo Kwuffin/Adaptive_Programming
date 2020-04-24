@@ -1,8 +1,9 @@
 import java.util.ArrayList;
 
-public class Reparateur implements Medewerker{
+public class Reparateur {
     private String naam;
     private int aantalJaarInDienst;
+    private ArrayList<Fietsenwinkel> reparateurs = new ArrayList<>();
 
     public Reparateur(String nm, int dienst){
         naam = nm;
@@ -15,16 +16,5 @@ public class Reparateur implements Medewerker{
 
     public void setAantalJaarInDienst(int aantalJaarInDienst) {
         this.aantalJaarInDienst = aantalJaarInDienst;
-    }
-
-    public int getAantalJaarInDienst() {
-        return aantalJaarInDienst;
-    }
-
-
-    @Override
-    public String naam() {
-        return null;
-
     }
 }

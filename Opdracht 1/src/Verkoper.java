@@ -1,16 +1,20 @@
-public class Verkoper implements Medewerker{
+import java.util.ArrayList;
+
+public class Verkoper {
     private String naam;
     private int aantalJaarInDienst;
+    private ArrayList<Fietsenwinkel> verkopers = new ArrayList<>();
 
     public Verkoper(String nm, int dienst){
         naam = nm;
         aantalJaarInDienst = dienst;
     }
 
-    @Override
-    public String naam() {
-        return null;
+    public void setNaam(String naam) {
+        this.naam = naam;
     }
 
-
+    public void setAantalJaarInDienst(int aantalJaarInDienst) {
+        this.aantalJaarInDienst = aantalJaarInDienst;
+    }
 }
