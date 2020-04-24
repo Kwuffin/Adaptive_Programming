@@ -2,6 +2,8 @@ public class Fietsenwinkel {
     private int aantalMedewerkers;
     private Klant klanten;
     private Fiets fietsen;
+    private Reparateur reparateur;
+    private Verkoper verkoper;
 
     public Fietsenwinkel(){
     }
@@ -22,8 +24,16 @@ public class Fietsenwinkel {
         return fietsen;
     }
 
+    public Reparateur getReparateur(){
+        return reparateur;
+    }
+
+    public Verkoper getVerkoper(){
+        return verkoper;
+    }
+
     public String toString(){
-        return (fietsen == null ? "Er zijn geen fietsen beschikbaar" : "ja");
+        return ("");
     }
 
 }

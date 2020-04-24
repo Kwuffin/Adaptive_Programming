@@ -1,5 +1,4 @@
-public class AutoHuur {
-
+public class AutoHuur implements Contract {
     private int aantalDagen;
     private Auto gehuurdeAuto;
     private Klant huurder;
