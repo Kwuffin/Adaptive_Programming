@@ -7,7 +7,7 @@ public class Fietsenwinkel {
     }
 
     public Fiets getFiets() {
-        return fiets;
+        return fietsen;
     }
 
     public int getAantalMedewerkers() {
@@ -23,7 +23,7 @@ public class Fietsenwinkel {
     }
 
     public String toString(){
-        return (fiets == null ? "Er zijn geen fietsen beschikbaar" : "ja");
+        return (fietsen == null ? "Er zijn geen fietsen beschikbaar" : "ja");
     }
 
 }
