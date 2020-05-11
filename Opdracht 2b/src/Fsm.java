@@ -1,0 +1,2 @@
+public class Fsm {
+}
