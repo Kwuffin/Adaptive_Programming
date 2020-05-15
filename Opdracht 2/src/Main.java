@@ -60,10 +60,10 @@ public class Main {
             nodes1.get(3).setNodeA(nodes1.get(3));
             nodes1.get(3).setNodeB(nodes1.get(0));
 
-            nodes1.add(nodes1.get(0));
-            nodes1.add(nodes1.get(1));
-            nodes1.add(nodes1.get(2));
-            nodes1.add(nodes1.get(3));
+//            nodes1.add(nodes1.get(0));
+//            nodes1.add(nodes1.get(1));
+//            nodes1.add(nodes1.get(2));
+//            nodes1.add(nodes1.get(3));
 
             Fsm fsm = new Fsm(nodes1);
 
@@ -77,22 +77,23 @@ public class Main {
 
             ArrayList<Node> nodes1= new ArrayList<>();
 
-//            These lines of code are commented out until it can be implemented fully
-//
-//            Scanner hn = new Scanner(System.in);
-//            System.out.println("Hoeveel end-nodes wil je?");
-//            int aantal_nodes = hn.nextInt();
+
+
+            Scanner hn = new Scanner(System.in);
+            System.out.println("Hoeveel nodes wil je?");
+            int aantal_nodes = hn.nextInt();
+
+
+//            These lines of code are commented out until it can be implemented
 //
 //            Scanner ve = new Scanner(System.in);
 //            System.out.println("Hoeveel verbindingen per node?");
 //            int aantal_verbindingen = ve.nextInt();
-//
-//            for(int i = 0; i < aantal_nodes; i ++){
-//                Node node = new Node(i);
-//                nodes1.add(node);
-//            }
 
-
+            for(int i = 0; i < aantal_nodes; i ++){
+                Node node = new Node(i);
+                nodes1.add(node);
+            }
 
             Node s0 = new Node(0);
 
@@ -140,6 +141,7 @@ public class Main {
             nodes1.add(s4);
             nodes1.add(s5);
             nodes1.add(s6);
+
             nodes1.add(endnote1);
             nodes1.add(endnote2);
             nodes1.add(endnote3);
