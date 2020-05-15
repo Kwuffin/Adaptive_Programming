@@ -15,10 +15,15 @@ public class Main {
         if(in == 1){
 
             System.out.println(">     Text-based");
+
             ArrayList<Node> nodes1 = new ArrayList<>();
 
             Scanner hn = new Scanner(System.in);
-            System.out.println("Hoeveel end-nodes wil je?");
+
+            // Werkt nog niet met minder dan 4 nodes --> Geeft index error
+            // Werkt helemaal met precies 4 nodes.
+            // Werkt half met meer dan 4 nodes --> Geeft geen error, maar negeert alle nodes die na de vierde worden gemaakt.
+            System.out.println("Hoeveel nodes wil je?\nNote: Werkt niet helemaal (Lees comments in code op regel 23)");
             int aantal_nodes = hn.nextInt();
 
 
@@ -39,26 +44,26 @@ public class Main {
                 nodes1.add(node);
             }
 
-            Node s0 = new Node(0);
-            Node s1 = new Node(1);
-            Node s2 = new Node(2);
-            Node s3 = new Node(3);
+//            Node s0 = new Node(0);
+//            Node s1 = new Node(1);
+//            Node s2 = new Node(2);
+//            Node s3 = new Node(3);
 
-            s0.setNodeA(s2);
-            s0.setNodeB(s1);
+            nodes1.get(0).setNodeA(nodes1.get(2));
+            nodes1.get(0).setNodeB(nodes1.get(1));
 
-            s1.setNodeA(s1);
-            s1.setNodeB(s2);
+            nodes1.get(1).setNodeA(nodes1.get(1));
+            nodes1.get(1).setNodeB(nodes1.get(2));
 
-            s2.setNodeB(s3);
+            nodes1.get(2).setNodeB(nodes1.get(3));
 
-            s3.setNodeA(s3);
-            s3.setNodeB(s0);
+            nodes1.get(3).setNodeA(nodes1.get(3));
+            nodes1.get(3).setNodeB(nodes1.get(0));
 
-            nodes1.add(s0);
-            nodes1.add(s1);
-            nodes1.add(s2);
-            nodes1.add(s3);
+            nodes1.add(nodes1.get(0));
+            nodes1.add(nodes1.get(1));
+            nodes1.add(nodes1.get(2));
+            nodes1.add(nodes1.get(3));
 
             Fsm fsm = new Fsm(nodes1);
 

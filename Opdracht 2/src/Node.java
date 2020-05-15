@@ -39,7 +39,6 @@ public class Node {
     }
 
 
-
     // Setters and Getters:
     public void setNodeA(Node n) {
         this.nodeA = n;
@@ -57,8 +56,6 @@ public class Node {
     public Node getNodeB() {
         return nodeB;
     }
-
-
 
 
     @Override
