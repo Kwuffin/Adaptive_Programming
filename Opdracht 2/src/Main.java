@@ -20,6 +20,9 @@ public class Main {
             Scanner hn = new Scanner(System.in);
             System.out.println("Hoeveel end-nodes wil je?");
             int aantal_nodes = hn.nextInt();
+
+
+//            These lines of code are commented out until it can be implemented fully
 //
 //            Scanner ve = new Scanner(System.in);
 //            System.out.println("Hoeveel verbindingen per node?");
@@ -29,6 +32,7 @@ public class Main {
 //                Node node = new Node(i);
 //                nodes1.add(node);
 //            }
+
 
             for(int i = 0; i < aantal_nodes; i ++){
                 Node node = new Node(i);
@@ -68,6 +72,8 @@ public class Main {
 
             ArrayList<Node> nodes1= new ArrayList<>();
 
+//            These lines of code are commented out until it can be implemented fully
+//
 //            Scanner hn = new Scanner(System.in);
 //            System.out.println("Hoeveel end-nodes wil je?");
 //            int aantal_nodes = hn.nextInt();
@@ -80,6 +86,7 @@ public class Main {
 //                Node node = new Node(i);
 //                nodes1.add(node);
 //            }
+
 
 
             Node s0 = new Node(0);
@@ -144,7 +151,7 @@ public class Main {
             System.out.println(">     Unit-tests");
             NodeTest testing = new NodeTest();
 
-            System.out.println("Testing in progres...");
+            System.out.println("Tests are in progres...");
             //tests the String FSM:
             testing.nodeTransferStringA();
             testing.nodeTransferStringB();
@@ -157,7 +164,7 @@ public class Main {
             testing.nodeTransferStringB();
             testing.nodeTransferRandomNotB();
 
-            System.out.println("Testing complete!");
+            System.out.println("Tests are complete without any known issues!");
         }
     }
 }

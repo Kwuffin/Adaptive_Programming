@@ -20,12 +20,11 @@ class NodeTest {
         Node s0 = new Node(0);
         Node s1 = new Node(1);
         Node s2 = new Node(2);
-        s0.setNodeA(s1);
-        s0.setNodeB(s2);
+        s0.setNodeA(s2);
+        s0.setNodeB(s1);
         String s = "B";
         assertEquals(s1, s0.nodeTransferString(s));
     }
-
 
 
     @Test
@@ -38,8 +37,6 @@ class NodeTest {
         String s = "C";
         assertNull(s0.nodeTransferString(s));
     }
-
-
 
 
     @Test
@@ -76,8 +73,8 @@ class NodeTest {
         Node s0 = new Node(0);
         Node s1 = new Node(1);
         Node s2 = new Node(2);
-        s0.setNodeA(s1);
-        s0.setNodeB(s2);
+        s0.setNodeA(s2);
+        s0.setNodeB(s1);
         assertNotEquals(s1, s0.nodeTransferRandom(30, 49));
     }
 
