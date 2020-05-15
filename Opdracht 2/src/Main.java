@@ -143,7 +143,18 @@ public class Main {
             //----------------------------------TEST FRAMEWORK----------------------------------
             System.out.println(">     Unit-tests");
             NodeTest testing = new NodeTest();
-            testing.nodeTransferString();
+
+            System.out.println("Testing in progres...");
+            //tests the String FSM:
+            testing.nodeTransferStringA();
+            testing.nodeTransferStringB();
+
+            //tests for the chance FSM:
+            testing.nodeTransferStringA();
+            testing.nodeTransferRandomNotA();
+            testing.nodeTransferStringB();
+            testing.nodeTransferRandomNotB();
+
 
         }
     }
