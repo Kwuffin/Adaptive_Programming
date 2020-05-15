@@ -39,9 +39,13 @@ public class Fsm {
 
             Random chance = new Random(); // Creates "Random" object-instance "chance"
 
+            Scanner c = new Scanner(System.in);
+            System.out.println("Hoe groot zijn de kansen voor de transitie? (0-100)\n i.e. 30 = 30% - 70% / 3 = 3% - 97%");
+            int kans = c.nextInt();
+
             while (true) {
-                int n = chance.nextInt(2); // Gives chance a random number (0 or 1)
-                Node newNode = currentnode.nodeTransferRandom(n);
+                int n = chance.nextInt(101); // Gives chance a random number (0 or 1)
+                Node newNode = currentnode.nodeTransferRandom(n, kans);
                 path.add(currentnode);
                 if (newNode != null) {
                     currentnode = newNode;

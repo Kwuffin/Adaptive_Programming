@@ -1,7 +1,9 @@
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Node {
     public int id;
+    private ArrayList<Node> connections = new ArrayList<>();
     public Node nodeA;
     public Node nodeB;
 
@@ -21,11 +23,11 @@ public class Node {
         }
     }
 
-    public Node nodeTransferRandom(int s){ // Parameter: either 0 or 1, random integer.
-        if (Objects.equals(s, 0)){
+    public Node nodeTransferRandom(int s, int chance){ // Parameter: either 0 or 1, random integer.
+        if (s <= chance){
             return getNodeA(); }
 
-        else if (Objects.equals(s, 1)){
+        else if (s > chance){
             return getNodeB(); }
 
         else {

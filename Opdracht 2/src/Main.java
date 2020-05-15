@@ -135,7 +135,7 @@ public class Main {
         }
         else if(in == 3) {
             //----------------------------------TEST FRAMEWORK----------------------------------
-            System.out.println("Testing");
+            System.out.println(">     Unit-tests");
 
 
         }
