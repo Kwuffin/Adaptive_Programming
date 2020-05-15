@@ -77,10 +77,11 @@ public class Main {
 
             ArrayList<Node> nodes1= new ArrayList<>();
 
-
-
             Scanner hn = new Scanner(System.in);
-            System.out.println("Hoeveel nodes wil je?");
+//          Werkt nog niet met minder dan 13 nodes --> Geeft index error
+//          Werkt helemaal met precies 13 nodes.
+//          Werkt half met meer dan 13 nodes --> Geeft geen error, maar negeert alle nodes die na de vierde worden gemaakt.
+            System.out.println("Hoeveel nodes wil je?\nNote: Werkt niet helemaal (Lees comments op regel 82)");
             int aantal_nodes = hn.nextInt();
 
 
@@ -95,59 +96,60 @@ public class Main {
                 nodes1.add(node);
             }
 
-            Node s0 = new Node(0);
+//            Node s0 = new Node(0);
+//
+//            Node s1 = new Node(1);
+//            Node s2 = new Node(2);
+//
+//            Node s3 = new Node(3);
+//            Node s4 = new Node(4);
+//            Node s5 = new Node(5);
+//            Node s6 = new Node(6);
+//
+//            Node endnote1 = new Node(7);
+//            Node endnote2 = new Node(8);
+//            Node endnote3 = new Node(9);
+//            Node endnote4 = new Node(10);
+//            Node endnote5 = new Node(11);
+//            Node endnote6 = new Node(12);
 
-            Node s1 = new Node(1);
-            Node s2 = new Node(2);
+            nodes1.get(0).setNodeA(nodes1.get(1));
+            nodes1.get(0).setNodeB(nodes1.get(2));
 
-            Node s3 = new Node(3);
-            Node s4 = new Node(4);
-            Node s5 = new Node(5);
-            Node s6 = new Node(6);
+            nodes1.get(1).setNodeA(nodes1.get(3));
+            nodes1.get(1).setNodeB(nodes1.get(4));
 
-            Node endnote1 = new Node(7);
-            Node endnote2 = new Node(8);
-            Node endnote3 = new Node(9);
-            Node endnote4 = new Node(10);
-            Node endnote5 = new Node(11);
-            Node endnote6 = new Node(12);
+            nodes1.get(2).setNodeA(nodes1.get(5));
+            nodes1.get(2).setNodeB(nodes1.get(5));
 
-            s0.setNodeA(s1);
-            s0.setNodeB(s2);
+            nodes1.get(3).setNodeA(nodes1.get(1));
 
-            s1.setNodeA(s3);
-            s1.setNodeB(s4);
+            nodes1.get(3).setNodeB(nodes1.get(7));
 
-            s2.setNodeA(s5);
-            s2.setNodeB(s6);
+            nodes1.get(4).setNodeA(nodes1.get(8));
+            nodes1.get(4).setNodeB(nodes1.get(9));
 
-            s3.setNodeA(s1);
-            s3.setNodeB(endnote1);
+            nodes1.get(5).setNodeA(nodes1.get(10));
+            nodes1.get(5).setNodeB(nodes1.get(11));
 
-            s4.setNodeA(endnote2);
-            s4.setNodeB(endnote3);
-
-            s5.setNodeA(endnote4);
-            s5.setNodeB(endnote5);
-
-            s6.setNodeA(s2);
-            s6.setNodeB(endnote6);
+            nodes1.get(6).setNodeA(nodes1.get(2));
+            nodes1.get(6).setNodeB(nodes1.get(12));
 
 
-            nodes1.add(s0);
-            nodes1.add(s1);
-            nodes1.add(s2);
-            nodes1.add(s3);
-            nodes1.add(s4);
-            nodes1.add(s5);
-            nodes1.add(s6);
-
-            nodes1.add(endnote1);
-            nodes1.add(endnote2);
-            nodes1.add(endnote3);
-            nodes1.add(endnote4);
-            nodes1.add(endnote5);
-            nodes1.add(endnote6);
+//            nodes1.add(s0);
+//            nodes1.add(s1);
+//            nodes1.add(s2);
+//            nodes1.add(s3);
+//            nodes1.add(s4);
+//            nodes1.add(s5);
+//            nodes1.add(s6);
+//
+//            nodes1.add(endnote1);
+//            nodes1.add(endnote2);
+//            nodes1.add(endnote3);
+//            nodes1.add(endnote4);
+//            nodes1.add(endnote5);
+//            nodes1.add(endnote6);
 
             Fsm fsm = new Fsm(nodes1);
 
