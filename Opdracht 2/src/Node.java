@@ -3,7 +3,6 @@ import java.util.Objects;
 
 public class Node {
     public int id;
-    private Transitions transitions; // List of all transitions of a node.
     public Node nodeA;
     public Node nodeB;
 

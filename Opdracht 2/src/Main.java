@@ -149,13 +149,15 @@ public class Main {
             testing.nodeTransferStringA();
             testing.nodeTransferStringB();
 
+            testing.nodeTransferStringNotANotB();
+
             //tests for the chance FSM:
             testing.nodeTransferStringA();
             testing.nodeTransferRandomNotA();
             testing.nodeTransferStringB();
             testing.nodeTransferRandomNotB();
 
-
+            System.out.println("Testing complete!");
         }
     }
 }
