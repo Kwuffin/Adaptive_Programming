@@ -17,7 +17,6 @@ public class FsmRandom {
         Random chance = new Random(); // Creates "Random" object-instance "chance"
 
         while (true) {
-
             int n = chance.nextInt(2); // Gives chance a random number (0 or 1)
             Node newNode = currentnode.nodeTransferRandom(n);
             path.add(currentnode);

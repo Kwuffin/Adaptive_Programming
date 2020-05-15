@@ -12,6 +12,8 @@ public class Main {
 
         if(in == 1){
 
+            ArrayList<Node> nodes= new ArrayList<>();
+
             Node s0 = new Node(0);
             Node s1 = new Node(1);
             Node s2 = new Node(2);
@@ -28,7 +30,7 @@ public class Main {
             s3.setNodeA(s3);
             s3.setNodeB(s0);
 
-            ArrayList<Node> nodes= new ArrayList<>();
+
 
             nodes.add(s0);
             nodes.add(s1);
@@ -41,7 +43,7 @@ public class Main {
         }
         else if(in == 2){
 
-//            ArrayList<Node> nodes= new ArrayList<>();
+            ArrayList<Node> nodes= new ArrayList<>();
 
             Scanner hn = new Scanner(System.in);
             System.out.println("Hoeveel end-nodes wil je?");
@@ -50,12 +52,6 @@ public class Main {
             Scanner ve = new Scanner(System.in);
             System.out.println("Hoeveel verbindingen per node?");
             int aantal_verbindingen = ve.nextInt();
-
-            Node[] nodes = new Node[aantal_nodes];
-            for(int i = 0; i < nodes.length; i++){
-                nodes[i] = new Node(i);
-            }
-            System.out.println(nodes);
 
             Node s0 = new Node(0);
 
@@ -96,28 +92,29 @@ public class Main {
             s6.setNodeB(endnote6);
 
 
-//
-//            nodes.add(s0);
-//            nodes.add(s1);
-//            nodes.add(s2);
-//            nodes.add(s3);
-//            nodes.add(s4);
-//            nodes.add(s5);
-//            nodes.add(s6);
-//            nodes.add(endnote1);
-//            nodes.add(endnote2);
-//            nodes.add(endnote3);
-//            nodes.add(endnote4);
-//            nodes.add(endnote5);
-//            nodes.add(endnote6);
-//
-//            FsmRandom fsmRandom = new FsmRandom(nodes);
-//
-//            fsmRandom.run();
+
+            nodes.add(s0);
+            nodes.add(s1);
+            nodes.add(s2);
+            nodes.add(s3);
+            nodes.add(s4);
+            nodes.add(s5);
+            nodes.add(s6);
+            nodes.add(endnote1);
+            nodes.add(endnote2);
+            nodes.add(endnote3);
+            nodes.add(endnote4);
+            nodes.add(endnote5);
+            nodes.add(endnote6);
+
+            FsmRandom fsmRandom = new FsmRandom(nodes);
+
+            fsmRandom.run();
+        }
+        else if(in == 3) {
+            //----------------------------------TEST FRAMEWORK----------------------------------
+            System.out.println("Testing ");
 
         }
-
-        //----------------------------------TEST FRAMEWORK----------------------------------
-
     }
 }
