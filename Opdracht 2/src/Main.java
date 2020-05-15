@@ -12,7 +12,25 @@ public class Main {
 
         if(in == 1){
 
-            ArrayList<Node> nodes= new ArrayList<>();
+//            System.out.println(">     Text-based");
+            ArrayList<Node> nodes1 = new ArrayList<>();
+//
+//            Scanner hn = new Scanner(System.in);
+//            System.out.println("Hoeveel end-nodes wil je?");
+//            int aantal_nodes = hn.nextInt();
+//
+//            Scanner ve = new Scanner(System.in);
+//            System.out.println("Hoeveel verbindingen per node?");
+//            int aantal_verbindingen = ve.nextInt();
+
+//            for(int i = 0; i < aantal_nodes; i++){
+//                Node node = new Node(i);
+//                nodes1.add(node);
+//            }
+//
+//            for(int i = 0; i < aantal_verbindingen; i++){
+//
+//            }
 
             Node s0 = new Node(0);
             Node s1 = new Node(1);
@@ -30,28 +48,33 @@ public class Main {
             s3.setNodeA(s3);
             s3.setNodeB(s0);
 
+            nodes1.add(s0);
+            nodes1.add(s1);
+            nodes1.add(s2);
+            nodes1.add(s3);
 
+            Fsm fsm = new Fsm(nodes1);
 
-            nodes.add(s0);
-            nodes.add(s1);
-            nodes.add(s2);
-            nodes.add(s3);
-
-            FsmString fsmString = new FsmString(nodes);
-
-            fsmString.run();
+            fsm.run(1);
         }
         else if(in == 2){
+            System.out.println(">     Chance-based");
 
-            ArrayList<Node> nodes= new ArrayList<>();
+            ArrayList<Node> nodes1= new ArrayList<>();
 
-            Scanner hn = new Scanner(System.in);
-            System.out.println("Hoeveel end-nodes wil je?");
-            int aantal_nodes = hn.nextInt();
+//            Scanner hn = new Scanner(System.in);
+//            System.out.println("Hoeveel end-nodes wil je?");
+//            int aantal_nodes = hn.nextInt();
+//
+//            Scanner ve = new Scanner(System.in);
+//            System.out.println("Hoeveel verbindingen per node?");
+//            int aantal_verbindingen = ve.nextInt();
+//
+//            for(int i = 0; i < aantal_nodes; i ++){
+//                Node node = new Node(i);
+//                nodes1.add(node);
+//            }
 
-            Scanner ve = new Scanner(System.in);
-            System.out.println("Hoeveel verbindingen per node?");
-            int aantal_verbindingen = ve.nextInt();
 
             Node s0 = new Node(0);
 
@@ -92,28 +115,28 @@ public class Main {
             s6.setNodeB(endnote6);
 
 
+            nodes1.add(s0);
+            nodes1.add(s1);
+            nodes1.add(s2);
+            nodes1.add(s3);
+            nodes1.add(s4);
+            nodes1.add(s5);
+            nodes1.add(s6);
+            nodes1.add(endnote1);
+            nodes1.add(endnote2);
+            nodes1.add(endnote3);
+            nodes1.add(endnote4);
+            nodes1.add(endnote5);
+            nodes1.add(endnote6);
 
-            nodes.add(s0);
-            nodes.add(s1);
-            nodes.add(s2);
-            nodes.add(s3);
-            nodes.add(s4);
-            nodes.add(s5);
-            nodes.add(s6);
-            nodes.add(endnote1);
-            nodes.add(endnote2);
-            nodes.add(endnote3);
-            nodes.add(endnote4);
-            nodes.add(endnote5);
-            nodes.add(endnote6);
+            Fsm fsm = new Fsm(nodes1);
 
-            FsmRandom fsmRandom = new FsmRandom(nodes);
-
-            fsmRandom.run();
+            fsm.run(0);
         }
         else if(in == 3) {
             //----------------------------------TEST FRAMEWORK----------------------------------
-            System.out.println("Testing ");
+            System.out.println("Testing");
+
 
         }
     }
