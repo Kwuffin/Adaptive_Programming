@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class Fsm {
 
-    private boolean isStringFSM;
     private List<Node> nodes1 = new ArrayList<>(); // Array of all nodes.
     private final List<Node> path = new ArrayList<>(); // Array of path through all nodes.
 

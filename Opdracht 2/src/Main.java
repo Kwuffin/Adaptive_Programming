@@ -14,7 +14,7 @@ public class Main {
         //Text-based FSM:
         if(in == 1){
 
-            System.out.println(">     Text-based");
+            System.out.println("==============================================================\n>     Text-based");
 
             ArrayList<Node> nodes1 = new ArrayList<>();
 
@@ -73,7 +73,7 @@ public class Main {
 
         //Chance-based FSM:
         else if(in == 2){
-            System.out.println(">     Chance-based");
+            System.out.println("==============================================================\n>     Chance-based");
 
             ArrayList<Node> nodes1= new ArrayList<>();
 
@@ -153,7 +153,7 @@ public class Main {
         }
         else if(in == 3) {
             //----------------------------------TEST FRAMEWORK----------------------------------
-            System.out.println(">     Unit-tests");
+            System.out.println("==============================================================\n>     Unit-tests");
             NodeTest testing = new NodeTest();
 
             System.out.println("Tests are in progres...");

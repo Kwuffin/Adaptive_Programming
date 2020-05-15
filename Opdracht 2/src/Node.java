@@ -2,9 +2,10 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Node {
-    public int id;
-    public Node nodeA;
-    public Node nodeB;
+    private int id;
+    private ArrayList<Node> transities = new ArrayList<>();
+    private Node nodeA;
+    private Node nodeB;
 
     public Node(int id) {
         this.id = id;
