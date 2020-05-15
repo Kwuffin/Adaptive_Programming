@@ -3,7 +3,7 @@ import java.util.Objects;
 
 public class Node {
     public int id;
-    private ArrayList<Node> connections = new ArrayList<>();
+    private Transitions transitions; // List of all transitions of a node.
     public Node nodeA;
     public Node nodeB;
 
@@ -11,7 +11,9 @@ public class Node {
         this.id = id;
     }
 
-    public Node nodeTransferString(String s){
+
+    // For the text-based FSM:
+    public Node nodeTransferString(String s){ // Gives a character from the pathString
         if (Objects.equals(s, "A")){
             return getNodeA(); }
 
@@ -23,7 +25,9 @@ public class Node {
         }
     }
 
-    public Node nodeTransferRandom(int s, int chance){ // Parameter: either 0 or 1, random integer.
+
+    // For the chance-based FSM:
+    public Node nodeTransferRandom(int s, int chance){ // Gives the random integer (0-100) and the user-input chance
         if (s <= chance){
             return getNodeA(); }
 
@@ -35,6 +39,9 @@ public class Node {
         }
     }
 
+
+
+    // Setters and Getters:
     public void setNodeA(Node n) {
         this.nodeA = n;
     }
@@ -43,6 +50,7 @@ public class Node {
         this.nodeB = n;
     }
 
+
     public Node getNodeA() {
         return nodeA;
     }
@@ -50,6 +58,9 @@ public class Node {
     public Node getNodeB() {
         return nodeB;
     }
+
+
+
 
     @Override
     public String toString() {

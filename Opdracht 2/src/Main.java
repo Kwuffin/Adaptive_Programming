@@ -10,27 +10,30 @@ public class Main {
 
         int in = sc.nextInt();
 
+
+        //Text-based FSM:
         if(in == 1){
 
-//            System.out.println(">     Text-based");
+            System.out.println(">     Text-based");
             ArrayList<Node> nodes1 = new ArrayList<>();
-//
-//            Scanner hn = new Scanner(System.in);
-//            System.out.println("Hoeveel end-nodes wil je?");
-//            int aantal_nodes = hn.nextInt();
+
+            Scanner hn = new Scanner(System.in);
+            System.out.println("Hoeveel end-nodes wil je?");
+            int aantal_nodes = hn.nextInt();
 //
 //            Scanner ve = new Scanner(System.in);
 //            System.out.println("Hoeveel verbindingen per node?");
 //            int aantal_verbindingen = ve.nextInt();
-
+//
 //            for(int i = 0; i < aantal_nodes; i++){
 //                Node node = new Node(i);
 //                nodes1.add(node);
 //            }
-//
-//            for(int i = 0; i < aantal_verbindingen; i++){
-//
-//            }
+
+            for(int i = 0; i < aantal_nodes; i ++){
+                Node node = new Node(i);
+                nodes1.add(node);
+            }
 
             Node s0 = new Node(0);
             Node s1 = new Node(1);
@@ -57,6 +60,9 @@ public class Main {
 
             fsm.run(1);
         }
+
+
+        //Chance-based FSM:
         else if(in == 2){
             System.out.println(">     Chance-based");
 
@@ -136,7 +142,8 @@ public class Main {
         else if(in == 3) {
             //----------------------------------TEST FRAMEWORK----------------------------------
             System.out.println(">     Unit-tests");
-
+            NodeTest testing = new NodeTest();
+            testing.nodeTransferString();
 
         }
     }

@@ -15,6 +15,9 @@ public class Fsm {
 
 
     public void run(int isStringFSM){
+
+
+        // Text-based FSM:
         if(isStringFSM == 1) {
             Node currentnode = nodes1.get(0);
 
@@ -34,6 +37,9 @@ public class Fsm {
             }
             System.out.println("Path: " + path);
         }
+
+
+        // Chance-based FSM:
         else if (isStringFSM == 0){
             Node currentnode = nodes1.get(0); // Sets currentnode as the starting node.
 
