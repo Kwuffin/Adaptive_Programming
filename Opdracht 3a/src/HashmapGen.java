@@ -80,12 +80,30 @@ public class HashmapGen {
                 else{ sList2.add("z"); }
                 counter++;
             }
-            }
-
-        System.out.println(sList1 + "\n"+ sList2);
-        for(int i = 0; i < lengte; i++){
-            ssHashmap.put(sList1.get(i), sList2.get(i));
         }
+
+        // De volgende regels verwijderen duplicate keys, omdat een Hashmap niet meerdere keren dezelfde key mag hebben.
+
+        System.out.println("Lists before removal of duplicates: \n" + sList1 + "\n" + sList2 + "\n");
+
+        ArrayList<String> sList1noDupe = new ArrayList<>();
+        ArrayList<String> sList2noDupe = new ArrayList<>();
+        int counter2 = 0;
+
+        for(String x : sList1){
+            if(!sList1noDupe.contains(x)){
+                int ind = sList1.indexOf(x);
+                sList1noDupe.add(x);
+                sList2noDupe.add(sList2.get(ind));
+            }
+        }
+
+        System.out.println("Lists after removal of duplicates: \n" + sList1noDupe + "\n"+ sList2noDupe);
+
+        for(int i = 0; i < sList1noDupe.size(); i++){
+            ssHashmap.put(sList1noDupe.get(i), sList2noDupe.get(i));
+        }
+
 
         System.out.println("Generated Hashmap: ");
         return ssHashmap;
