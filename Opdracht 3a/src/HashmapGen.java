@@ -9,20 +9,20 @@ public class HashmapGen {
 
     public HashMap<String, String> hshmpGen(int lengte){
 
-        ArrayList<String> sList1 = new ArrayList<String>();
-        ArrayList<String> sList2 = new ArrayList<String>();
-        HashMap<String, String> ssHashmap = new HashMap<String, String>();
+        ArrayList<String> sList1 = new ArrayList<>();
+        ArrayList<String> sList2 = new ArrayList<>();
+        HashMap<String, String> ssHashmap = new HashMap<>();
 
         Random a = new Random();
         Random b = new Random();
 
-        int counter = 0;
+        int counter = 1;
 
         for(int i = 0; i < lengte*2; i++){
             int r_int = a.nextInt(26);
             int r_int2 = b.nextInt(26);
 
-            if(counter < lengte){
+            if(counter <= lengte){
                 if (r_int == 0) { sList1.add("a"); }
                 else if(r_int == 1){ sList1.add("b"); }
                 else if(r_int == 2){ sList1.add("c"); }
@@ -81,11 +81,13 @@ public class HashmapGen {
                 counter++;
             }
             }
+
         System.out.println(sList1 + "\n"+ sList2);
         for(int i = 0; i < lengte; i++){
             ssHashmap.put(sList1.get(i), sList2.get(i));
         }
-        System.out.println("Generated Hashmap: " + ssHashmap);
+
+        System.out.println("Generated Hashmap: ");
         return ssHashmap;
         }
     }
