@@ -6,7 +6,7 @@ public class InsertionSorter {
     public InsertionSorter() {
     }
 
-    public ArrayList<String> insertionSorter(ArrayList<String> iList) {
+    public ArrayList<String> insertionSorterArray(ArrayList<String> iList) {
 
         for (int i = 1; i < iList.size(); i++) { //
             String current = iList.get(i); // i is een iterator voor de lijst iList.

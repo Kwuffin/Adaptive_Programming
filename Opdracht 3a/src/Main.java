@@ -8,16 +8,26 @@ public class Main {
         System.out.println("Hoeveel Strings wil je in je lijst?");
         int aantal = sc_aa.nextInt();
 
-        StringGen sg1 = new StringGen();
+        // Als je meerdere verschillende "Generated lists" wilt, maak meer StringGen objecten aan.
+        // Geef elk StringGen object door aan elk verschillend sorteer-algoritme.
+        ArrayGen sg1 = new ArrayGen();
+        HashmapGen hg1 = new HashmapGen();
 
 
         // Bubble sort op ArrayList:
         BubbleSorter bubble = new BubbleSorter();
-        System.out.println("Bubble sort:\nSorted list:    " + bubble.bubblesorter(sg1.strGen(aantal)) + "\n"); // Maak een lijst en voer een bubble sort uit.
+        System.out.println("Bubble sort op ArrayList:");
+        System.out.println("Sorted ArrayList:    " + bubble.bubbleSorterArray(sg1.strGen(aantal)) + "\n"); // Maak een lijst en voer een bubble sort uit.
 
 
         // Insertion sort op ArrayList:
         InsertionSorter insertion = new InsertionSorter();
-        System.out.println("Insertion sort:\nSorted list2:   " + insertion.insertionSorter(sg1.strGen(aantal)));
+        System.out.println("Insertion sort op ArrayList:");
+        System.out.println("Sorted ArrayList:    " + insertion.insertionSorterArray(sg1.strGen(aantal)));
+
+
+        // Hashmap sort WIP:
+
+        System.out.println(hg1.hshmpGen(aantal));
     }
 }

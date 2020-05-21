@@ -5,7 +5,7 @@ public class BubbleSorter {
     public BubbleSorter(){
     }
 
-    public ArrayList<String> bubblesorter(ArrayList<String> aList){
+    public ArrayList<String> bubbleSorterArray(ArrayList<String> aList){
 
         for(int i = 0; i < aList.size(); i++){
             for(int j = i + 1; j < aList.size(); j++){

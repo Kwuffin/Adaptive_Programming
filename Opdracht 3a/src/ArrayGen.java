@@ -1,20 +1,12 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
-import java.util.Scanner;
 
-public class StringGen {
+public class ArrayGen {
 
-//    private List<String> sList = new ArrayList<>();
-
-    public StringGen() {
+    public ArrayGen() {
     }
 
     public ArrayList<String> strGen(int lengte) {
-//
-//        Scanner sc_aa = new Scanner(System.in);
-//        System.out.println("Hoeveel Strings wil je in je lijst?");
-//        int aantal = sc_aa.nextInt();
 
         ArrayList<String> sList = new ArrayList<>(lengte);
 
@@ -50,7 +42,7 @@ public class StringGen {
             else if(r_int == 24){ sList.add("y"); }
             else{ sList.add("z"); }
         }
-        System.out.println("Generated list: "+ sList);
+        System.out.println("Generated ArrayList: "+ sList);
         return sList;
     }
 }
