@@ -21,7 +21,7 @@ public class StringGen {
         Random a = new Random();
 
         for (int i = 0; i < lengte; i++) {
-            int r_int = a.nextInt(25);
+            int r_int = a.nextInt(26);
 
             if (r_int == 0) { sList.add("a"); }
             else if(r_int == 1){ sList.add("b"); }
@@ -50,6 +50,7 @@ public class StringGen {
             else if(r_int == 24){ sList.add("y"); }
             else{ sList.add("z"); }
         }
+        System.out.println("Generated list: "+ sList);
         return sList;
     }
 }

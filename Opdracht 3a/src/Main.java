@@ -13,6 +13,6 @@ public class Main {
         StringGen sg1 = new StringGen();
         Sorter bubble = new Sorter();
 
-        System.out.println(bubble.bubblesorter(sg1.strGen(aantal))); // Maak een lijst en voer een bubble sort uit.
+        System.out.println("Sorted list:    " + bubble.bubblesorter(sg1.strGen(aantal))); // Maak een lijst en voer een bubble sort uit.
     }
 }
