@@ -10,17 +10,17 @@ public class StringGen {
     public StringGen() {
     }
 
-    public ArrayList<String> strGen() {
+    public ArrayList<String> strGen(int lengte) {
+//
+//        Scanner sc_aa = new Scanner(System.in);
+//        System.out.println("Hoeveel Strings wil je in je lijst?");
+//        int aantal = sc_aa.nextInt();
 
-        Scanner sc_aa = new Scanner(System.in);
-        System.out.println("Hoeveel Strings wil je in je lijst?");
-        int aantal = sc_aa.nextInt();
-
-        ArrayList<String> sList = new ArrayList<>(aantal);
+        ArrayList<String> sList = new ArrayList<>(lengte);
 
         Random a = new Random();
 
-        for (int i = 0; i < aantal; i++) {
+        for (int i = 0; i < lengte; i++) {
             int r_int = a.nextInt(25);
 
             if (r_int == 0) { sList.add("a"); }
