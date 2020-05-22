@@ -83,7 +83,7 @@ public class HashmapGen {
 
         // De volgende regels verwijderen duplicate keys, omdat een Hashmap niet meerdere keren dezelfde key mag hebben.
 
-        System.out.println("Lists before removal of duplicates: \n" + sList1 + "\n" + sList2 + "\n");
+//        System.out.println("Lists before removal of duplicates: \n" + sList1 + "\n" + sList2 + "\n");
 
         ArrayList<String> sList1noDupe = new ArrayList<>();
         ArrayList<String> sList2noDupe = new ArrayList<>();
@@ -96,7 +96,7 @@ public class HashmapGen {
             }
         }
 
-        System.out.println("Lists after removal of duplicates: \n" + sList1noDupe + "\n"+ sList2noDupe);
+//        System.out.println("Lists after removal of duplicates: \n" + sList1noDupe + "\n"+ sList2noDupe);
 
         for(int i = 0; i < sList1noDupe.size(); i++){
             ssHashmap.put(sList1noDupe.get(i), sList2noDupe.get(i));
