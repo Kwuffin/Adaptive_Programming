@@ -88,11 +88,10 @@ public class HashmapGen {
         ArrayList<String> sList1noDupe = new ArrayList<>();
         ArrayList<String> sList2noDupe = new ArrayList<>();
 
-        for(String x : sList1){
-            if(!sList1noDupe.contains(x)){
-                int ind = sList1.indexOf(x);
-                sList1noDupe.add(x);
-                sList2noDupe.add(sList2.get(ind));
+        for(int i = 0; i < sList1.size(); i++){
+            if(!sList1noDupe.contains(sList1.get(i))){
+                sList1noDupe.add(sList1.get(i));
+                sList2noDupe.add(sList2.get(i));
             }
         }
 
