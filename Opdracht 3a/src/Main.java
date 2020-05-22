@@ -12,22 +12,23 @@ public class Main {
         // Geef elk StringGen object door aan elk verschillend sorteer-algoritme.
         ArrayGen sg1 = new ArrayGen();
         HashmapGen hg1 = new HashmapGen();
-
+        BubbleSorter bubble = new BubbleSorter();
+        InsertionSorter insertion = new InsertionSorter();
 
         // Bubble sort op ArrayList:
-        BubbleSorter bubble = new BubbleSorter();
+
         System.out.println("Bubble sort op ArrayList:");
         System.out.println("Sorted ArrayList:    " + bubble.bubbleSorterArray(sg1.strGen(aantal)) + "\n"); // Maak een lijst en voer een bubble sort uit.
 
 
         // Insertion sort op ArrayList:
-        InsertionSorter insertion = new InsertionSorter();
+
         System.out.println("Insertion sort op ArrayList:");
         System.out.println("Sorted ArrayList:    " + insertion.insertionSorterArray(sg1.strGen(aantal)));
 
 
         // Hashmap sort WIP:
-
-        System.out.println(hg1.hshmpGen(aantal));
+        System.out.println("Bubble sort op Hashmap keys:");
+        System.out.println("Sorted Hashmap:      " + bubble.bubbleSorterHashmapKey(hg1.hshmpGen(aantal)));
     }
 }

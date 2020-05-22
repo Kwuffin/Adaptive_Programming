@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class BubbleSorter {
 
@@ -18,5 +19,31 @@ public class BubbleSorter {
             }
         }
         return aList;
+    }
+
+
+
+    public HashMap<String, String> bubbleSorterHashmapKey(HashMap<String, String> hMap){
+        HashMap<String, String> sortedHmap = new HashMap<>();
+        ArrayList<String> keyList = new ArrayList<>();
+        ArrayList<String> valueList = new ArrayList<>();
+
+        for(String key : hMap.keySet()){
+            keyList.add(key);
+        }
+        for(int i = 0; i < hMap.size(); i++){
+            valueList.add(hMap.get(i));
+        }
+
+        for(int i = 0; i < hMap.size(); i++){
+            for(int j = i + 1; j < hMap.size(); j++){
+
+                if(hMap.get(keyList.get(j)).compareToIgnoreCase(hMap.get(keyList.get(i))) < 0){
+                    String temp = hMap.get(keyList.get(i));
+                    sortedHmap.put(keyList.get(j), valueList.get(j));
+                }
+            }
+        }
+        return sortedHmap;
     }
 }

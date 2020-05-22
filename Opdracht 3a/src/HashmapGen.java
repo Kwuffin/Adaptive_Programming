@@ -104,8 +104,7 @@ public class HashmapGen {
             ssHashmap.put(sList1noDupe.get(i), sList2noDupe.get(i));
         }
 
-
-        System.out.println("Generated Hashmap: ");
+        System.out.println("Generated Hashmap:   " + ssHashmap);
         return ssHashmap;
         }
     }
