@@ -49,7 +49,6 @@ public class HashmapGen {
                 else if(r_int == 23){ sList1.add("x"); }
                 else if(r_int == 24){ sList1.add("y"); }
                 else{ sList1.add("z"); }
-                counter++;
             }
             else{
                 if (r_int2 == 0) { sList1.add("a"); }
@@ -78,8 +77,8 @@ public class HashmapGen {
                 else if(r_int2 == 23){ sList2.add("x"); }
                 else if(r_int2 == 24){ sList2.add("y"); }
                 else{ sList2.add("z"); }
-                counter++;
             }
+            counter++;
         }
 
         // De volgende regels verwijderen duplicate keys, omdat een Hashmap niet meerdere keren dezelfde key mag hebben.
@@ -88,7 +87,6 @@ public class HashmapGen {
 
         ArrayList<String> sList1noDupe = new ArrayList<>();
         ArrayList<String> sList2noDupe = new ArrayList<>();
-        int counter2 = 0;
 
         for(String x : sList1){
             if(!sList1noDupe.contains(x)){

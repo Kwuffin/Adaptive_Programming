@@ -30,9 +30,7 @@ public class BubbleSorter {
 
         for(String key : hMap.keySet()){
             keyList.add(key);
-        }
-        for(int i = 0; i < hMap.size(); i++){
-            valueList.add(hMap.get(i));
+            valueList.add(hMap.get(key));
         }
 
         for(int i = 0; i < hMap.size(); i++){
