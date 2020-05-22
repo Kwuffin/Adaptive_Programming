@@ -8,6 +8,7 @@ public class BubbleSorter {
 
     public ArrayList<String> bubbleSorterArray(ArrayList<String> aList){
 
+        // Bubble sort algorithm:
         for(int i = 0; i < aList.size(); i++){
             for(int j = i + 1; j < aList.size(); j++){
 
@@ -33,15 +34,36 @@ public class BubbleSorter {
             valueList.add(hMap.get(key));
         }
 
-        for(int i = 0; i < hMap.size(); i++){
-            for(int j = i + 1; j < hMap.size(); j++){
+        // Bubble sort algorithm:
+        for(int i = 0; i < keyList.size(); i++){
+            for(int j = i + 1; j < keyList.size(); j++){
 
-                if(hMap.get(keyList.get(j)).compareToIgnoreCase(hMap.get(keyList.get(i))) < 0){
-                    String temp = hMap.get(keyList.get(i));
-                    sortedHmap.put(keyList.get(j), valueList.get(j));
+                if(keyList.get(j).compareToIgnoreCase(keyList.get(i)) < 0){
+                    String temp = keyList.get(i);
+                    keyList.set(i, keyList.get(j));
+                    keyList.set(j, temp);
+                    String temp2 = valueList.get(i);
+                    valueList.set(i, valueList.get(j));
+                    valueList.set(j, temp2);
                 }
             }
         }
+
+
+        for(int i = 0; i < keyList.size(); i++){
+            sortedHmap.put(keyList.get(i), valueList.get(i));
+        }
+
+
+//        for(int i = 0; i < hMap.size(); i++){
+//            for(int j = i + 1; j < hMap.size(); j++){
+//
+//                if(hMap.get(keyList.get(j)).compareToIgnoreCase(hMap.get(keyList.get(i))) < 0){
+//                    String temp = hMap.get(keyList.get(i));
+//                    sortedHmap.put(keyList.get(j), valueList.get(j));
+//                }
+//            }
+//        }
         return sortedHmap;
     }
 }
