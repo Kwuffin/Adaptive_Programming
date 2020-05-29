@@ -129,7 +129,7 @@ public class Main {
             else if (inp == 2) {
                 endNodeAfstand = nodeBAfstand;
                 endNodeKosten = nodeBKosten;
-                endNodeTijd = nodeATijd;
+                endNodeTijd = nodeBTijd;
             }
             else if (inp == 1) {
                 endNodeAfstand = nodeAAfstand;
