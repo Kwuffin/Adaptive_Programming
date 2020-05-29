@@ -5,24 +5,26 @@ import java.util.Map;
 
 public class Node {
 
-    private Node type;
-
+    private Stap type;
     private String name;
-
     private List<Node> shortestPath = new LinkedList<>();
-
     private Integer distance = Integer.MAX_VALUE;
 
+
     Map<Node, Integer> adjacentNodes = new HashMap<>();
+
 
     public void addDestination(Node destination, int distance) {
         adjacentNodes.put(destination, distance);
     }
 
-    public Node(String name) {
-        this.name = name;
+
+    public Node(String n) {
+        name = n;
     }
 
+
+    // Getters en setters
     public String getName() {
         return name;
     }
@@ -54,6 +56,7 @@ public class Node {
     public Map<Node, Integer> getAdjacentNodes() {
         return adjacentNodes;
     }
+
 
     @Override
     public String toString(){

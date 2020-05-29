@@ -1,7 +1,4 @@
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Dijkstra {
 
@@ -10,6 +7,7 @@ public class Dijkstra {
 
         Set<Node> settledNodes = new HashSet<>();
         Set<Node> unsettledNodes = new HashSet<>();
+        PriorityQueue<Node> unsettledNode = new PriorityQueue<>();
 
         unsettledNodes.add(source);
 
@@ -53,6 +51,4 @@ public class Dijkstra {
             evaluationNode.setShortestPath(shortestPath);
         }
     }
-
-
 }

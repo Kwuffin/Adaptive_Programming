@@ -9,6 +9,7 @@ public class Main {
             int inp = s.nextInt();
 
 
+
             // Add afstanden voor stap in kilometers.
             Node nodeAAfstand = new Node("A");
             Node nodeBAfstand = new Node("B");
@@ -37,6 +38,7 @@ public class Main {
             g1.addNode(nodeDAfstand);
             g1.addNode(nodeEAfstand);
             g1.addNode(nodeFAfstand);
+
 
 
             // Add kosten voor stap in Euros.
@@ -69,7 +71,8 @@ public class Main {
             g2.addNode(nodeFKosten);
 
 
-            // Add kosten voor stap in Euros.
+
+            // Add Tijd voor stap in uren.
             Node nodeATijd = new Node("A");
             Node nodeBTijd = new Node("B");
             Node nodeCTijd = new Node("C");
@@ -98,6 +101,7 @@ public class Main {
             g3.addNode(nodeETijd);
             g3.addNode(nodeFTijd);
 
+
             Node endNodeAfstand = nodeFAfstand;
             Node endNodeKosten = nodeFKosten;
             Node endNodeTijd = nodeFTijd;
@@ -106,7 +110,8 @@ public class Main {
                 endNodeAfstand = endNodeAfstand;
                 endNodeKosten = endNodeKosten;
                 endNodeTijd = endNodeTijd;
-            } else if (inp == 5) {
+            }
+            else if (inp == 5) {
                 endNodeAfstand = nodeEAfstand;
                 endNodeKosten = nodeEKosten;
                 endNodeTijd = nodeETijd;
@@ -125,7 +130,8 @@ public class Main {
                 endNodeAfstand = nodeBAfstand;
                 endNodeKosten = nodeBKosten;
                 endNodeTijd = nodeATijd;
-            } else if (inp == 1) {
+            }
+            else if (inp == 1) {
                 endNodeAfstand = nodeAAfstand;
                 endNodeKosten = nodeAKosten;
                 endNodeTijd = nodeATijd;
@@ -135,22 +141,20 @@ public class Main {
                 break;
             }
 
+
             g1 = Dijkstra.calculateShortestPathFromSource(g1, nodeAAfstand);
-            System.out.println("Pad voor kortste afstand: " + endNodeAfstand.getShortestPath());
-            System.out.println("Kortste afstand: " + endNodeAfstand.getDistance() + "\n");
+            System.out.println("Pad voor de kortste afstand: " + endNodeAfstand.getShortestPath());
+            System.out.println("Kortste afstand: " + endNodeAfstand.getDistance() + "km.\n");
 
 
             g2 = Dijkstra.calculateShortestPathFromSource(g2, nodeAKosten);
-            System.out.println("Pad voor minste kosten: " + endNodeKosten.getShortestPath());
-            System.out.println("Minste kosten: " + endNodeKosten.getDistance() + "\n");
+            System.out.println("Pad voor de minste kosten: " + endNodeKosten.getShortestPath());
+            System.out.println("Minste kosten: " + endNodeKosten.getDistance() + " Euro.\n");
 
 
             g3 = Dijkstra.calculateShortestPathFromSource(g3, nodeATijd);
-            System.out.println("Pad voor kortste tijd: " + endNodeTijd.getShortestPath());
-            System.out.println("Kortste tijd: " + endNodeTijd.getDistance() + "\n");
-
-
-
+            System.out.println("Pad voor de kortste tijd: " + endNodeTijd.getShortestPath());
+            System.out.println("Kortste tijd: " + endNodeTijd.getDistance() + " uur.\n");
 
         }
     }
