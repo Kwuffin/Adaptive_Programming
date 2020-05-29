@@ -1,4 +1,4 @@
-public class Vlucht extends Stap {
+public class Vlucht {
     private int kosten;
 
     public Vlucht(int kosten){

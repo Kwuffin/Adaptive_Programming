@@ -2,15 +2,20 @@ import java.util.ArrayList;
 
 public class Reis implements Comparable {
 
-    private ArrayList<Node> stappen = new ArrayList<>();
+    private ArrayList<Stap> stappen = new ArrayList<>();
+    private int afstand;
 
 
 
-    public ArrayList<Node> getStappen() {
+    public int getAfstand() { return afstand; }
+
+    public void setAfstand(int afstand) { this.afstand = afstand; }
+
+    public ArrayList<Stap> getStappen() {
         return stappen;
     }
 
-    public void setStappen(ArrayList<Node> stappen) {
+    public void setStappen(ArrayList<Stap> stappen) {
         this.stappen = stappen;
     }
 

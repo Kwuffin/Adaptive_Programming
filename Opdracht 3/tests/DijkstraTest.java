@@ -1,7 +1,3 @@
-import org.junit.jupiter.api.BeforeAll;
-
-import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class DijkstraTest {
@@ -10,12 +6,12 @@ class DijkstraTest {
     void calculateShortestPathFromSourceAfstanden() {
         // Test pad A - B - E - F
 
-        Node nodeAAfstand = new Node("A");
-        Node nodeBAfstand = new Node("B");
-        Node nodeCAfstand = new Node("C");
-        Node nodeDAfstand = new Node("D");
-        Node nodeEAfstand = new Node("E");
-        Node nodeFAfstand = new Node("F");
+        Stap nodeAAfstand = new Stap("A");
+        Stap nodeBAfstand = new Stap("B");
+        Stap nodeCAfstand = new Stap("C");
+        Stap nodeDAfstand = new Stap("D");
+        Stap nodeEAfstand = new Stap("E");
+        Stap nodeFAfstand = new Stap("F");
 
         Graph g1 = new Graph();
 
@@ -31,7 +27,7 @@ class DijkstraTest {
 
         nodeEAfstand.addDestination(nodeCAfstand, 1);
 
-        Node endNodeAfstand = nodeFAfstand;
+        Stap endNodeAfstand = nodeFAfstand;
 
         g1 = Dijkstra.calculateShortestPathFromSource(g1, nodeAAfstand);
 

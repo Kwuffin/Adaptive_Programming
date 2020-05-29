@@ -1,4 +1,4 @@
-public class Rit extends Stap {
+public class Rit {
     private int afstand;
 
     public Rit(int afst){

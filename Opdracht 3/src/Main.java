@@ -11,12 +11,12 @@ public class Main {
 
 
             // Add afstanden voor stap in kilometers.
-            Node nodeAAfstand = new Node("A");
-            Node nodeBAfstand = new Node("B");
-            Node nodeCAfstand = new Node("C");
-            Node nodeDAfstand = new Node("D");
-            Node nodeEAfstand = new Node("E");
-            Node nodeFAfstand = new Node("F");
+            Stap nodeAAfstand = new Stap("A");
+            Stap nodeBAfstand = new Stap("B");
+            Stap nodeCAfstand = new Stap("C");
+            Stap nodeDAfstand = new Stap("D");
+            Stap nodeEAfstand = new Stap("E");
+            Stap nodeFAfstand = new Stap("F");
 
             nodeAAfstand.addDestination(nodeBAfstand, 200);
             nodeAAfstand.addDestination(nodeCAfstand, 500);
@@ -42,12 +42,12 @@ public class Main {
 
 
             // Add kosten voor stap in Euros.
-            Node nodeAKosten = new Node("A");
-            Node nodeBKosten = new Node("B");
-            Node nodeCKosten = new Node("C");
-            Node nodeDKosten = new Node("D");
-            Node nodeEKosten = new Node("E");
-            Node nodeFKosten = new Node("F");
+            Stap nodeAKosten = new Stap("A");
+            Stap nodeBKosten = new Stap("B");
+            Stap nodeCKosten = new Stap("C");
+            Stap nodeDKosten = new Stap("D");
+            Stap nodeEKosten = new Stap("E");
+            Stap nodeFKosten = new Stap("F");
 
             nodeAKosten.addDestination(nodeBKosten, 50);
             nodeAKosten.addDestination(nodeCKosten, 200);
@@ -73,12 +73,12 @@ public class Main {
 
 
             // Add Tijd voor stap in uren.
-            Node nodeATijd = new Node("A");
-            Node nodeBTijd = new Node("B");
-            Node nodeCTijd = new Node("C");
-            Node nodeDTijd = new Node("D");
-            Node nodeETijd = new Node("E");
-            Node nodeFTijd = new Node("F");
+            Stap nodeATijd = new Stap("A");
+            Stap nodeBTijd = new Stap("B");
+            Stap nodeCTijd = new Stap("C");
+            Stap nodeDTijd = new Stap("D");
+            Stap nodeETijd = new Stap("E");
+            Stap nodeFTijd = new Stap("F");
 
             nodeATijd.addDestination(nodeBTijd, 2);
             nodeATijd.addDestination(nodeCTijd, 4);
@@ -102,9 +102,9 @@ public class Main {
             g3.addNode(nodeFTijd);
 
 
-            Node endNodeAfstand = nodeFAfstand;
-            Node endNodeKosten = nodeFKosten;
-            Node endNodeTijd = nodeFTijd;
+            Stap endNodeAfstand = nodeFAfstand;
+            Stap endNodeKosten = nodeFKosten;
+            Stap endNodeTijd = nodeFTijd;
 
             if (inp == 6) {
                 endNodeAfstand = endNodeAfstand;
@@ -141,19 +141,32 @@ public class Main {
                 break;
             }
 
+            Reis r1 = new Reis();
+            Reis r2 = new Reis();
+            Reis r3 = new Reis();
+
 
             g1 = Dijkstra.calculateShortestPathFromSource(g1, nodeAAfstand);
-            System.out.println("Pad voor de kortste afstand: " + endNodeAfstand.getShortestPath());
+            g2 = Dijkstra.calculateShortestPathFromSource(g2, nodeAKosten);
+            g3 = Dijkstra.calculateShortestPathFromSource(g3, nodeATijd);
+
+            for(Stap n : endNodeAfstand.getShortestPath()){
+                r1.getStappen().add(n);
+            }
+            for(Stap n : endNodeKosten.getShortestPath()){
+                r2.getStappen().add(n);
+            }
+            for(Stap n : endNodeTijd.getShortestPath()){
+                r3.getStappen().add(n);
+            }
+
+            System.out.println("Pad voor de kortste afstand: " + r1.getStappen());
             System.out.println("Kortste afstand: " + endNodeAfstand.getDistance() + "km.\n");
 
-
-            g2 = Dijkstra.calculateShortestPathFromSource(g2, nodeAKosten);
-            System.out.println("Pad voor de minste kosten: " + endNodeKosten.getShortestPath());
+            System.out.println("Pad voor de minste kosten: " + r2.getStappen());
             System.out.println("Minste kosten: " + endNodeKosten.getDistance() + " Euro.\n");
 
-
-            g3 = Dijkstra.calculateShortestPathFromSource(g3, nodeATijd);
-            System.out.println("Pad voor de kortste tijd: " + endNodeTijd.getShortestPath());
+            System.out.println("Pad voor de kortste tijd: " + r3.getStappen());
             System.out.println("Kortste tijd: " + endNodeTijd.getDistance() + " uur.\n");
 
         }

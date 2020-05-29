@@ -3,20 +3,20 @@ import java.util.Set;
 
 public class Graph {
 
-    private Set<Node> nodes = new HashSet<>();
+    private Set<Stap> nodes = new HashSet<>();
 
-    public void addNode(Node nodeA) {
+    public void addNode(Stap nodeA) {
         nodes.add(nodeA);
     }
 
 
 
     // Getter en setter
-    public void setNodes(Set<Node> nodes) {
+    public void setNodes(Set<Stap> nodes) {
         this.nodes = nodes;
     }
 
-    public Set<Node> getNodes() {
+    public Set<Stap> getNodes() {
         return nodes;
 
     }

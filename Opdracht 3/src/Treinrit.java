@@ -1,4 +1,4 @@
-public class Treinrit extends Stap {
+public class Treinrit {
     private int tijd;
 
     public Treinrit(int t){
